@@ -6,7 +6,7 @@ include('../settings/database.php');
 $email = $_POST['email'];
 $passwd = MD5($_POST['pswd']);
  
-$sql_check_email = "SELECT * FROM users WHERE email '$email' ";
+$sql_check_email = "SELECT * FROM users WHERE email = '$email' ";
 $res = pg_query($local_conn, $sql_check_email);
 $total = pg_num_rows($res);
 echo "i'm here";
